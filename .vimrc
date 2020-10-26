@@ -1,7 +1,8 @@
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
-set noshowmode
+set noshowmode "hide defualt bar
+set laststatus=2 "always show bar 
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
