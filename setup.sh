@@ -4,7 +4,7 @@ cat banner.txt
 echo 'This script installs VIM with python support and Plugged (plugin manager)'
 echo 'it includes powerline status bar, nerdtree file manager, auto suggestions and customisations'
 
-[[ -n $PY_SITE_PKGS ]] || (echo -e 'powerline-status appears not be installed for user PY_SITE_PKGS must be set with you path to HOME/.local/lib/pythonx.X/site-packages/, you can install with: pip3 install powerline-status --user' && exit 1)
+#[[ -n $PY_SITE_PKGS ]] || (echo -e 'powerline-status appears not be installed for user PY_SITE_PKGS must be set with you path to HOME/.local/lib/pythonx.X/site-packages/, you can install with: pip3 install powerline-status --user' && exit 1)
 
 echo 'This will remove any exisitng version of VIM, vim related configs and plugins in ~/.vim/'
 echo 'Do you want to continue? Y/N'
