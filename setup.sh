@@ -20,14 +20,27 @@ rm -rf ~/.vim
 rm -f ~/.vimrc
 
 echo 'installing vim'
+viminstalled=$(which vim)
+if [ -z $viminstalled ] ; then
+	echo 'vim is already installed - moving on :) '
+else
+	install_vim
+fi
 
 
-android=$(uname -a | grep 'Android')
-if [ ! -z $android ] ; then
-	echo android detected
+if [ "$OSTYPE" == 'linux-android' ] ; then
 	apt-get install vim-python -y
-else 
-	sudo pacman -S vim -y || sudo apt-get install vim -y
+else
+	echo 'Please enter your device OS: '
+	echo 'options: arch, debian, ubuntu, other'
+        read user_os
+	if [ $user_os == "arch" ] ; then
+		sudo pacman -S vim -y 
+	elif [ $user_os == "debian" ] || [ $user_os == "ubuntu" ] ; then
+		sudo apt-get install vim -y
+	elif [ $user_os == "other" ] ; then
+		echo 'please install vim from your package manager and re-run script'
+	fi
 fi
 
 py_support=$(vim --version | grep +python)
