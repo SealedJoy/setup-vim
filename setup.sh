@@ -56,4 +56,7 @@ cp -f .vimrc ~/.vimrc
 echo 'installing plugins'
 vim +PlugInstall +qall
 
+#echo 'installing jedi autocomplete'
+#pip install jedi --user
+
 echo "done! - use vimtutor to get better with vim"
