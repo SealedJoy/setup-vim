@@ -22,7 +22,7 @@ rm -f ~/.vimrc
 echo 'installing vim'
 
 
-android=$(uname -a | grep 'android')
+android=$(uname -a | grep 'Android')
 if [ ! -z $android ] ; then
 	echo android detected
 	apt-get install vim-python -y
