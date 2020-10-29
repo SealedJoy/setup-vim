@@ -7,9 +7,11 @@ set laststatus=2 "always show bar
 set mouse=a
 set ttymouse=xterm2
 call plug#begin('~/.vim/plugged')
-Plug 'davidhalter/jedi-vim'
 Plug 'maralla/completor.vim'
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+Plug 'masawada/completor-dictionary'
+Plug 'davidhalter/jedi-vim'
+Plug 'airblade/vim-gitgutter.git'
+Plug 'junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/limelight.vim'
 "Plug 'vim-scripts/AutoComplPop'

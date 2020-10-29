@@ -1,5 +1,23 @@
 #!/usr/bin/env bash
 # SealyJ's vim Setup script
+
+install_vim(){
+if [ "$OSTYPE" == 'linux-android' ] ; then
+	apt-get install vim-python -y
+else
+	echo 'Please enter your device OS: '
+	echo 'options: arch, debian, ubuntu, other'
+        read user_os
+	if [ $user_os == "arch" ] ; then
+		sudo pacman -S vim -y 
+	elif [ $user_os == "debian" ] || [ $user_os == "ubuntu" ] ; then
+		sudo apt-get install vim -y
+	elif [ $user_os == "other" ] ; then
+		echo 'please install vim from your package manager and re-run script'
+	fi
+fi
+}
+
 cat banner.txt
 echo 'This script installs VIM with python support and Plugged (plugin manager)'
 echo 'it includes powerline status bar, nerdtree file manager, auto suggestions and customisations'
@@ -16,8 +34,15 @@ fi
 
 
 echo 'removing old data...'
-rm -rf ~/.vim
+rm -rf ~/.vim && mkdir ~/.vim
 rm -f ~/.vimrc
+
+py_support=$(vim --version | grep +python)
+if [ -z $py_support ] ; then
+	echo 'your version of vim does not support python, please reinstall a version that does and rerun script' 
+	exit 1
+fi
+
 
 echo 'installing vim'
 viminstalled=$(which vim)
@@ -27,24 +52,6 @@ else
 	install_vim
 fi
 
-
-if [ "$OSTYPE" == 'linux-android' ] ; then
-	apt-get install vim-python -y
-else
-	echo 'Please enter your device OS: '
-	echo 'options: arch, debian, ubuntu, other'
-        read user_os
-	if [ $user_os == "arch" ] ; then
-		sudo pacman -S vim -y 
-	elif [ $user_os == "debian" ] || [ $user_os == "ubuntu" ] ; then
-		sudo apt-get install vim -y
-	elif [ $user_os == "other" ] ; then
-		echo 'please install vim from your package manager and re-run script'
-	fi
-fi
-
-py_support=$(vim --version | grep +python)
-[[ -z $py_support ]] && (echo 'your version of vim does not support python, please reinstall a version that does and rerun script' && exit 1)
 
 echo 'installing plugin manager'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
