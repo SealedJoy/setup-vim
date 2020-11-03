@@ -17,8 +17,10 @@ Plug 'junegunn/limelight.vim'
 "Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 
+set termguicolors
+
 let g:jedi#popup_select_first = 0 "select first autocomplete suggestion
-"let g:jedi#popup_on_dot = 0 "autocompletion disabled with period .
+let g:jedi#popup_on_dot = 0 "autocompletion disabled with period .
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
