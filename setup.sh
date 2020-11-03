@@ -37,12 +37,6 @@ echo 'removing old data...'
 rm -rf ~/.vim && mkdir ~/.vim
 rm -f ~/.vimrc
 
-py_support=$(vim --version | grep +python)
-if [ -z $py_support ] ; then
-	echo 'your version of vim does not support python, please reinstall a version that does and rerun script' 
-	exit 1
-fi
-
 
 echo 'installing vim'
 viminstalled=$(which vim)
@@ -51,6 +45,13 @@ if [ -z $viminstalled ] ; then
 else
 	install_vim
 fi
+
+py_support=$(vim --version | grep +python)
+if [ -z $py_support ] ; then
+	echo 'your version of vim does not support python, please reinstall a version that does and rerun script' 
+	exit 1
+fi
+
 
 
 echo 'installing plugin manager'
