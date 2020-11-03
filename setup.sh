@@ -40,7 +40,7 @@ rm -f ~/.vimrc
 
 echo 'installing vim'
 viminstalled=$(which vim)
-if [ -z $viminstalled ] ; then
+if [ ! -z $viminstalled ] ; then
 	echo 'vim is already installed - moving on :) '
 else
 	install_vim
