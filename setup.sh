@@ -46,7 +46,7 @@ else
 	install_vim
 fi
 
-py_support=$(vim --version | grep +python)
+py_support="$(vim --version | grep '+python')"
 if [ -z $py_support ] ; then
 	echo 'your version of vim does not support python, please reinstall a version that does and rerun script' 
 	exit 1
