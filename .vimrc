@@ -14,6 +14,7 @@ Plug 'airblade/vim-gitgutter.git'
 Plug 'junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/limelight.vim'
+Plug 'dylanaraps/wal.vim'
 "Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 
