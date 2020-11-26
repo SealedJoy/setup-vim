@@ -56,7 +56,7 @@ fi
 
 echo 'installing plugin manager'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /dev/null 2>&1 || echo 'failed to get plugin manager'
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /dev/null 2>&1 || (echo 'failed to get plugin manager exiting...' ; exit 1)
 
 echo 'installing config'
 cp -f .vimrc ~/.vimrc 

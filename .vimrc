@@ -18,7 +18,8 @@ Plug 'dylanaraps/wal.vim'
 "Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 
-set termguicolors
+"set termguicolors
+colorscheme wal
 
 let g:jedi#popup_select_first = 0 "select first autocomplete suggestion
 let g:jedi#popup_on_dot = 0 "autocompletion disabled with period .
