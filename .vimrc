@@ -5,7 +5,7 @@ set encoding=utf-8
 set noshowmode "hide default bar
 set laststatus=2 "always show bar 
 set mouse=a
-set ttymouse=xterm2
+"set ttymouse=xterm2
 call plug#begin('~/.vim/plugged')
 Plug 'maralla/completor.vim'
 Plug 'masawada/completor-dictionary'
