@@ -1,10 +1,10 @@
 # setup-vim
 
 Minimal script made to setup and install Vi-IMproved (VIM) editor, with tried and tested plugins + further customistation.
-tesedian/arch/ubuntu or any other distros with bash and curl support.
-It requires no user input (after confirmation) and provides a powerful, yet minimal out-of-the-box setup.
+tested with: tel, termux, arch, debian, ubuntu also provides support for other linux based distros with bash and curl.
+After starting the setup it requires no user input and provides a powerful, yet minimal out-of-the-box setup, working well as is or easily used as a template to customise.
 
-As I use this as my daily driver you can trust it to be up to date and error free.
+As I use this as my daily driver you can trust it to be reliable.
 
 ### setup-vim includes: 
 
