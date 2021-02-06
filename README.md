@@ -25,7 +25,7 @@ python 3
 
 powerline-status 
 
-install with: pip3 install powerline-status --user
+`pip3 install powerline-status --user`
 
 # Install:
 
