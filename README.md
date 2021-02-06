@@ -27,3 +27,6 @@ powerline-status
 
 install with: pip3 install powerline-status --user
 
+# Install:
+
+`git clone --depth=1 https://github.com/sealedjoy/setup-vim && cd setup-vim && ./setup.sh`
