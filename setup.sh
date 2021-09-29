@@ -6,12 +6,12 @@ if [ "$OSTYPE" == 'linux-android' ] ; then
 	apt-get install vim-python -y
 else
 	echo 'Please enter your device OS: '
-	echo 'options: arch, debian, ubuntu, other'
+	echo 'options: arch, debian, ubuntu, raspbian, other'
         read user_os
 	if [ $user_os == "arch" ] ; then
 		sudo pacman -S vim -y 
-	elif [ $user_os == "debian" ] || [ $user_os == "ubuntu" ] ; then
-		sudo apt-get install vim -y
+	elif [ $user_os == "debian" ] || [ $user_os == "ubuntu" ] || [ $user_os == "raspbian" ] ; then
+		sudo apt-get install vim-nox -y
 	elif [ $user_os == "other" ] ; then
 		echo 'please install vim from your package manager and re-run script'
 	fi
